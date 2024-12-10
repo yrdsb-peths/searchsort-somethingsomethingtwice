@@ -1,7 +1,5 @@
 package searchsort;
 
-import searchsort.Util;
-
 public class QuickSort extends Sort {
     /**
      * Sort the array arr using quick sort algorithm.

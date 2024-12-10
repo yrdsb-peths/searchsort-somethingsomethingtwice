@@ -11,7 +11,7 @@ public class BinarySearch extends Search {
         int hi = arr.length - 1;
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
-            if (target == mid)
+            if (target == arr[mid])
                 return mid;
             else if (target < arr[mid])
                 hi = mid - 1;

@@ -23,7 +23,7 @@ public class Util {
      * Exchange the elements at indices i and j in the array arr.
      */
     public static void exch(int[] arr, int i, int j) {
-        int prev_i = i;
+        int prev_i = arr[i];
         arr[i] = j;
         arr[j] = prev_i;
     }
@@ -34,6 +34,8 @@ public class Util {
     public static int[] generateRandomArray(int n, Long seed) {
         // Create a new integer array of size n
         int[] arr = new int[n];
+        for (int i = 0; i < n; i++)
+            arr[i] = i;
         // Shuffle the array using the Shuffle method with the given seed
         Util.shuffle(arr, seed);
         // Return the shuffled array
