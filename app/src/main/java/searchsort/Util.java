@@ -13,6 +13,9 @@ public class Util {
         // Implement the Fisher-Yates shuffle algorithm
         // To generate a random index between 0 and i (exclusive) use:
         // random.nextInt(i)
+        for (int i = arr.length - 1; i > 0; i--) {
+            exch(arr, i, random.nextInt(arr.length));
+        }
         return arr;
     }
 
@@ -20,7 +23,9 @@ public class Util {
      * Exchange the elements at indices i and j in the array arr.
      */
     public static void exch(int[] arr, int i, int j) {
-
+        int prev_i = i;
+        arr[i] = j;
+        arr[j] = prev_i;
     }
 
     /**
@@ -28,9 +33,9 @@ public class Util {
      */
     public static int[] generateRandomArray(int n, Long seed) {
         // Create a new integer array of size n
-
+        int[] arr = new int[n];
         // Shuffle the array using the Shuffle method with the given seed
-
+        Util.shuffle(arr, seed);
         // Return the shuffled array
         return new int[n];
     }
@@ -39,6 +44,13 @@ public class Util {
      * Check if the array arr is sorted in ascending order.
      */
     public static boolean isSorted(int[] arr) {
+        int previous = Integer.MIN_VALUE;
+        for (int i : arr) {
+            if (i >= previous)
+                previous = i;
+            else
+                return false;
+        }
         return true;
     }
 }
