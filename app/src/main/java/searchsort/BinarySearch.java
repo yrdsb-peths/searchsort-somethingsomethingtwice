@@ -10,13 +10,13 @@ public class BinarySearch extends Search {
         int lo = 0;
         int hi = arr.length - 1;
         while (lo <= hi) {
-            int mid = (lo + hi) / 2;
-            if (target == arr[mid])
-                return mid;
-            else if (target < arr[mid])
+            int mid = (lo + hi) / 2;    
+            if (target < arr[mid])
                 hi = mid - 1;
             else if (target > arr[mid])
                 lo = mid + 1;
+            else
+                return mid;
         }
         return -1;
     }

@@ -24,7 +24,7 @@ public class Util {
      */
     public static void exch(int[] arr, int i, int j) {
         int prev_i = arr[i];
-        arr[i] = j;
+        arr[i] = arr[j];
         arr[j] = prev_i;
     }
 
@@ -39,7 +39,7 @@ public class Util {
         // Shuffle the array using the Shuffle method with the given seed
         Util.shuffle(arr, seed);
         // Return the shuffled array
-        return new int[n];
+        return arr;
     }
 
     /**

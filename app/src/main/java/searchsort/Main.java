@@ -20,5 +20,11 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+
+        int[] input = { 5, 2, 9, 1, 5, 6 };
+
+        // Call the sort method
+        InsertionSort.sort(input);
+        System.out.println(input);
     }
 }
