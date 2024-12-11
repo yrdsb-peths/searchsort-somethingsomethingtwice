@@ -10,7 +10,7 @@ public class SelectionSort {
         while (lo < hi) {
             int min = lo;
             for (int i = lo + 1; i < arr.length; i++) {
-                if (arr[i] < arr[lo])
+                if (arr[i] < arr[min])
                     min = i;
             }
             Util.exch(arr, min, lo++);

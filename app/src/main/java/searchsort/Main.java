@@ -21,10 +21,11 @@ public class Main {
             System.out.print(arr[i] + " ");
         }
 
-        int[] input = { 5, 2, 9, 1, 5, 6 };
-
-        // Call the sort method
-        InsertionSort.sort(input);
-        System.out.println(input);
+        System.out.println();
+        int[] arr2 = { 1, 2, 3, 4, 5 };
+        Util.shuffle(arr2, 12345L);
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i] + " ");
+        }
     }
 }

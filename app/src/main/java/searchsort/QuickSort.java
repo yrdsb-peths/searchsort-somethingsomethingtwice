@@ -28,11 +28,11 @@ public class QuickSort extends Sort {
         int i = low;
         int j = high + 1;
         while (true) {
-            while (arr[++i] > arr[low]) {
+            while (arr[++i] < arr[low]) {
                 if (i == high)
                     break;
             }
-            while (arr[--j] < arr[low]) {
+            while (arr[--j] > arr[low]) {
                 if (j == low)
                     break;
             }
